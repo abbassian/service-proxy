@@ -1,0 +1,67 @@
+{
+    "name": "behamin/service-proxy",
+    "description": "for proxy or sending requests to other services with useful utilities",
+    "keywords": [
+        "behamin",
+        "request",
+        "http",
+        "laravel",
+        "guzzle",
+        "service",
+        "proxy"
+    ],
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^7.0|^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "behamin/bresources": "^2.2|^1.5"
+    },
+    "scripts": {
+        "test": "phpunit --color=always"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alireza Bahram",
+            "email": "alib327@gmail.com"
+        },
+        {
+            "name": "Omid Alizadeh",
+            "email": "om.alizadeh1@gmail.com"
+        },
+        {
+            "name": "Hebrahimzadeh",
+            "email": "abi.hossein@gmail.com"
+        },
+        {
+            "name": "Mohammad Hosein Abedini",
+            "email": "mohammadhoseinabedini@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Behamin\\ServiceProxy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Behamin\\ServiceProxy\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Behamin\\ServiceProxy\\Providers\\ProxyServiceProvider"
+            ],
+            "aliases": {
+                "Proxy": "Behamin\\ServiceProxy\\Proxy"
+            }
+        }
+    }
+}
